@@ -453,29 +453,6 @@ Potential production upgrades include:
 
 ------------------------------------------------------------------------
 
-# 💼 Client Pitch
-
-The project is structured so restaurant-specific content can be changed
-centrally instead of rewriting the UI.
-
-A client can update:
-
--   Menu
--   Prices
--   Offers
--   Hours
--   Address
--   Delivery information
--   Reviews
-
-from the content layer.
-
-The current build is therefore suitable as a **restaurant website /
-ordering-system prototype** and can be extended into a production system
-with persistent storage and an admin panel.
-
-------------------------------------------------------------------------
-
 # 📌 Current Status
 
 **Project Type:** Restaurant website + ordering/booking demo\
