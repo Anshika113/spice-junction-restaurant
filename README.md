@@ -1,221 +1,501 @@
-# Spice Junction — Restaurant
+# 🌶️ Spice Junction --- Restaurant Website
 
-Site for a busy multi-cuisine family restaurant. The job of every screen is
-the same: place an order or book a table in under three taps.
+A modern, responsive multi-cuisine restaurant website designed around
+one simple goal:
 
-React (Vite, JS) frontend + FastAPI backend. **No database is connected** — that
-is deliberate for a pitch demo.
+> **Help customers place an order or book a table in under three taps.**
 
----
+Built with a **React + Vite frontend** and a **FastAPI backend**.\
+The project currently uses **in-memory data instead of a database**,
+which is intentional for a client-pitch/demo build.
 
-## Run it
+## 🔗 Project
 
-### Frontend only (this is all you need for a demo)
+-   **GitHub:** https://github.com/Anshika113/spice-junction-restaurant
 
-```bash
+------------------------------------------------------------------------
+
+## ✨ Features
+
+### Customer Experience
+
+-   🏠 Home, Menu and Contact pages
+-   🍽️ Interactive menu with:
+    -   Category navigation
+    -   Veg / Non-veg / Jain filters
+    -   Bestseller filter
+    -   Under ₹200 filter
+    -   Search
+    -   Spice-level indicator
+    -   Half/full portion pricing
+    -   Add-to-cart functionality
+    -   Running cart total
+-   🛒 Guest checkout without account creation
+-   🚚 Delivery and takeaway ordering
+-   📅 Table booking
+-   💬 WhatsApp order/booking confirmation
+-   📞 Click-to-call functionality
+-   📍 Google Maps and directions
+-   ⭐ Reviews section with average rating
+-   📱 Sticky mobile action bar
+-   🔒 Privacy policy page
+-   ♿ Visible keyboard focus and reduced-motion support
+
+### UI / Motion
+
+-   Interactive 3D hero plate stack
+-   Pointer-based card tilt
+-   Scroll parallax
+-   Offer flip cards
+-   Scroll reveal animations
+-   Reduced-motion support
+-   Touch-device friendly interactions
+
+------------------------------------------------------------------------
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+-   React
+-   Vite
+-   JavaScript
+-   React Router
+-   CSS
+
+### Backend
+
+-   Python
+-   FastAPI
+-   Uvicorn
+
+### Data
+
+-   JSON content file
+-   In-memory order and booking storage
+
+### Integrations / Browser Features
+
+-   WhatsApp links
+-   Google Maps
+-   `tel:` click-to-call
+-   REST API
+
+------------------------------------------------------------------------
+
+## 📁 Project Structure
+
+``` text
+spice-junction-restaurant/
+│
+├── backend/
+│   ├── app/
+│   │   ├── data/
+│   │   │   └── content.json
+│   │   └── store.py
+│   ├── main.py
+│   └── requirements.txt
+│
+├── frontend/
+│   ├── public/
+│   ├── scripts/
+│   ├── src/
+│   │   ├── api/
+│   │   ├── components/
+│   │   ├── hooks/
+│   │   ├── pages/
+│   │   ├── content/
+│   │   └── styles/
+│   ├── .env.example
+│   └── package.json
+│
+├── .gitignore
+└── README.md
+```
+
+------------------------------------------------------------------------
+
+# 🚀 Getting Started
+
+## 1. Clone the repository
+
+``` bash
+git clone https://github.com/Anshika113/spice-junction-restaurant.git
+cd spice-junction-restaurant
+```
+
+------------------------------------------------------------------------
+
+## 2. Frontend-only demo
+
+The easiest way to run the project is the static frontend mode.
+
+``` bash
 cd frontend
 npm install
-npm run dev          # http://localhost:5173
+npm run dev
 ```
 
-The site runs fully static. `src/api/static.js` mirrors every API route in the
-browser and reads the same `content.json` the backend uses, so there is nothing
-to start and nothing to break in front of a client.
+Open:
 
-### With the FastAPI backend
+``` text
+http://localhost:5173
+```
 
-```bash
+The static API mirrors the backend routes in the browser, so the
+frontend can run without starting FastAPI.
+
+------------------------------------------------------------------------
+
+# ⚙️ Run with FastAPI Backend
+
+From the project root:
+
+``` bash
 cd backend
-python -m venv .venv && source .venv/bin/activate    # Windows: .venv\Scripts\activate
+```
+
+### Windows
+
+``` bash
+python -m venv .venv
+.venv\Scripts\activate
 pip install -r requirements.txt
-uvicorn main:app --reload --port 8000                # http://localhost:8000/docs
+uvicorn main:app --reload --port 8000
 ```
 
-Then, in `frontend/.env`:
+### macOS / Linux
 
+``` bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+uvicorn main:app --reload --port 8000
 ```
+
+Backend API:
+
+``` text
+http://localhost:8000
+```
+
+Interactive API documentation:
+
+``` text
+http://localhost:8000/docs
+```
+
+------------------------------------------------------------------------
+
+## Frontend API Configuration
+
+Create:
+
+``` text
+frontend/.env
+```
+
+For backend mode:
+
+``` env
 VITE_USE_API=true
+VITE_API_BASE=/api
 ```
 
-Restart `npm run dev`. Vite proxies `/api` to port 8000. Orders and bookings now
-hit real endpoints and land in an in-memory list (`backend/app/store.py`) that
-clears on restart — that list is where a real DB would go.
+Then restart Vite:
 
-### Build for production
-
-```bash
-cd frontend && npm run build     # -> frontend/dist, drop this on Cloudflare Pages
+``` bash
+cd frontend
+npm run dev
 ```
 
----
+Vite proxies `/api` requests to the FastAPI server on port `8000`.
 
-## Editing the content
+### Static mode
 
-Everything the client sees — dishes, prices, offers, hours, address, delivery
-areas, reviews — lives in **one file**:
+For a frontend-only demo:
 
+``` env
+VITE_USE_API=false
 ```
+
+No backend server is required.
+
+------------------------------------------------------------------------
+
+# 🔌 Backend API
+
+  Method   Route                   Purpose
+  -------- ----------------------- --------------------------------------------------
+  GET      `/api/info`             Restaurant information, hours and delivery rules
+  GET      `/api/menu`             Menu data with category/search support
+  GET      `/api/offers`           Current restaurant offers
+  GET      `/api/reviews`          Reviews and computed average
+  POST     `/api/orders`           Creates an order
+  GET      `/api/orders`           Order/admin view
+  POST     `/api/bookings/table`   Books/holds a table
+  POST     `/api/bookings/party`   Party booking estimate
+  GET      `/api/bookings`         Booking/admin view
+
+------------------------------------------------------------------------
+
+# 📝 Editing Restaurant Content
+
+Most customer-facing content is controlled from:
+
+``` text
 backend/app/data/content.json
 ```
 
-`npm run dev` and `npm run build` copy it into `frontend/src/content/` automatically
-(`frontend/scripts/sync-content.mjs`). Edit the JSON, refresh, done. This is also
-the file an admin panel would write to before a database exists — useful line when
-you pitch the Growth tier.
+This includes:
 
-Swap for the real client before the meeting:
-- `info.name`, `info.address_line1/2`, `info.phone`, `info.whatsapp`, `info.upi`
-- `info.maps_query` (drives both map embeds and the directions button)
-- the four reviews with their real recent Google reviews
-- `DishArt` placeholder artwork with actual WebP photos
+-   Restaurant name
+-   Address
+-   Phone
+-   WhatsApp
+-   UPI
+-   Opening hours
+-   Delivery rules
+-   Menu items
+-   Prices
+-   Offers
+-   Reviews
+-   Map query
 
----
+The frontend sync script copies the content into the frontend during
+development/build.
 
-## The white screen past the footer — fixed here
+For a real client, replace the demo information with the client's
+actual:
 
-`frontend/src/styles/global.css`, section 1 at the top of the file.
+``` text
+name
+address
+phone
+WhatsApp
+UPI
+map location
+prices
+reviews
+photos
+```
 
-It was never a layout overflow bug. It is the browser's rubber-band overscroll
-exposing `<html>`'s default white background — which is why it only shows at the
-two ends of the page and grows as you keep pulling.
+------------------------------------------------------------------------
 
-Three things together kill it:
+# 🖼️ Images
 
-1. `overscroll-behavior: none` on **both** `html` and `body` — stops the bounce.
-2. `html` painted in the page's own colour (`--char`) — nothing white left to expose.
-3. An `@supports (-webkit-touch-callout: none)` gradient fallback, because older
-   iOS Safari ignores `overscroll-behavior` on the document.
+The project uses generated placeholder artwork for the demo.
 
-Header and footer are both `--char` here, so `html` is `--char` and both ends match.
-**If you recolour the header or footer, update that gradient too** — the comment in
-the CSS says the same thing.
+Placeholder images are created automatically by:
 
-Modals use `overscroll-behavior: contain` so scrolling inside the cart doesn't drag
-the page behind it.
+``` text
+scripts/make-placeholders.mjs
+```
 
----
+To replace them with real restaurant photographs:
 
-## Where the 2D/3D effects are
+1.  Export dish images as WebP.
+2.  Use approximately `800x800` for square dish images.
+3.  Use `16:9` for offer/banner images.
+4.  Name images according to the IDs used in `content.json`.
+5.  Place them inside:
 
-The 2D half is a hard-offset shadow system (`--hard`, no blur) on buttons, chips
-and cards — press a button and it physically sinks into its shadow.
+``` text
+frontend/public/img/
+```
 
-The 3D half is real perspective, used in four places only:
+6.  Update the image extension in:
 
-| Effect | File | What it does |
-|---|---|---|
-| Hero plate stack | `components/Hero.jsx` | Four layers on separate `translateZ` planes, tilting to the pointer |
-| Scroll parallax | `hooks/useParallax.js` | Rotates the hero scene a few degrees as you scroll |
-| Offer flip cards | `components/Offers.jsx` | `rotateY(180deg)` to the fine print, hover on desktop, tap on mobile |
-| Card tilt | `hooks/useTilt.js` | Pointer tilt on the hero plate and the party-booking panel |
-| Scroll reveal | `hooks/useReveal.js` | Sections rise and un-rotate once, on first view |
+``` text
+frontend/src/media.js
+```
 
-Both hooks take the element's own classes as their first/second argument, because
-their props get spread onto the tag — `useTilt(6, 'panel')`, `useReveal('shell two-col')`.
+The image component has a fallback so missing individual photos do not
+break the menu grid.
 
-Everything is off under `prefers-reduced-motion`, and tilt is skipped for touch
-pointers so it never fights a scroll.
+------------------------------------------------------------------------
 
----
+# 🎨 Design System
 
-## What's in the build
+### Color Palette
 
-**Pages** — Home, Menu, Contact. Ordering and table booking are modals, so nobody
-loses their cart to a page change.
+  Color        Hex
+  ------------ -----------
+  Tomato       `#E23A2E`
+  Spinach      `#1F6B4A`
+  Mustard      `#F5A623`
+  Warm White   `#FFF7F0`
+  Char         `#191512`
 
-**Signature element** — the full interactive menu (`components/MenuBoard.jsx`):
-sticky category nav, five filter chips (Veg / Non-veg / Jain / Bestseller / Under ₹200),
-search, 1–3 chilli spice indicator, half/full portion pricing, add-to-cart with a
-running total in a sticky footer bar. Never a PDF, never an image of a menu.
+### Typography
 
-**Baseline that ships on every demo:**
-- Floating WhatsApp button with a pre-filled message, on every page
-- Click-to-call, `tel:` links
-- Sticky mobile action bar — Order / Book / Call, three actions, no more
-- Google Maps embed + Get directions
-- Reviews block with average and recency
-- `Restaurant` schema in `index.html`, including hours and `acceptsReservations`
-- NAP and opening hours as text in the footer, not baked into an image
-- Guest checkout, six fields maximum, no account
-- Visible keyboard focus, `prefers-reduced-motion` respected
-- Privacy policy on the Contact page
+-   **Archivo Black** --- display headings
+-   **Inter** --- body text
+-   Tabular figures for prices
 
-**Palette** — tomato `#E23A2E`, spinach `#1F6B4A`, mustard `#F5A623`, warm white
-`#FFF7F0`, char `#191512`. One direction, bold, no muted neutrals mixed in.
-**Type** — Archivo Black display, Inter body, tabular figures on every price.
+------------------------------------------------------------------------
 
----
+# 🧊 2D / 3D Effects
 
-## Backend API
+The project uses a combination of hard-offset shadows and real CSS
+perspective effects.
 
-| Method | Route | Notes |
-|---|---|---|
-| GET | `/api/info` | NAP, hours, delivery rules, UPI, aggregator links |
-| GET | `/api/menu` | `?category=` and `?q=` supported |
-| GET | `/api/offers` | Three running offers |
-| GET | `/api/reviews` | With computed average |
-| POST | `/api/orders` | Returns order id, totals, ETA, WhatsApp text |
-| GET | `/api/orders` | Stands in for the admin panel |
-| POST | `/api/bookings/table` | Slot hold |
-| POST | `/api/bookings/party` | Per-plate estimate, veg and 100+ discounts applied |
-| GET | `/api/bookings` | Admin view |
+  Effect             Implementation
+  ------------------ -------------------------
+  Hero plate stack   `components/Hero.jsx`
+  Scroll parallax    `hooks/useParallax.js`
+  Offer flip cards   `components/Offers.jsx`
+  Card tilt          `hooks/useTilt.js`
+  Scroll reveal      `hooks/useReveal.js`
 
-Interactive docs at `/docs` once uvicorn is running.
+Motion is disabled/respected for users who prefer reduced motion, and
+pointer tilt is skipped for touch interactions.
 
----
+------------------------------------------------------------------------
 
-## Before the client meeting
+# 📦 Production Build
 
-1. Put their name, photos and real prices in `content.json`.
-2. Point the WhatsApp number at your own phone and send an enquiry in front of them.
-   This is the moment that closes the deal.
-3. Run PageSpeed on their current site or JustDial listing, screenshot it next to
-   this build.
-4. Show `content.json` and say: menu and rates you change yourself, no phone call
-   to me.
+Create the frontend production build:
 
----
+``` bash
+cd frontend
+npm run build
+```
 
-## Images
+The generated production files are placed in:
 
-Every picture on the site is a **temporary generated placeholder**, written to
-`frontend/public/img/` by `scripts/make-placeholders.mjs` (runs automatically
-before `dev` and `build`, or `npm run images` on its own). They are drawn in
-the brand palette, deterministic per dish id, and the wide ones carry a
-"DEMO IMAGE — REPLACE" watermark so nobody mistakes them for finished work.
+``` text
+frontend/dist/
+```
 
-To put the client's real photos in:
+These files can be deployed to a static hosting platform such as
+Cloudflare Pages.
 
-1. Export as WebP — dishes square 800x800, offers 16:9, hero square-ish.
-2. Name each file after the id in `content.json` (`s1.webp`, `lunch-thali.webp`)
-   and drop it in the same folder.
-3. In `frontend/src/media.js`, change `EXT` from `'.svg'` to `'.webp'`.
+------------------------------------------------------------------------
 
-That is the whole swap. `Photo.jsx` falls back to the drawn plate art if any
-single file is missing, so a half-finished photoshoot never leaves a hole in
-the grid, and the "these are placeholders" note in the footer disappears on its
-own once `EXT` changes.
+# 🐛 Troubleshooting
 
----
+## Blank page
 
-## If the page comes up blank
+First install dependencies:
 
-The site can no longer fail silently: `index.html` carries a boot fallback and a
-global error handler, and `src/components/ErrorBoundary.jsx` catches render
-crashes. Whatever went wrong gets printed on the page. Read that message first.
+``` bash
+cd frontend
+npm install
+```
 
-If nothing at all appears, work down this list:
+Then restart Vite with a clean dependency cache:
 
-1. `npm install` inside `frontend/` — the zip ships without `node_modules`.
-2. Stop the server and run `npm run dev -- --force`. This clears Vite's
-   dependency cache in `node_modules/.vite`, which goes stale after a folder is
-   moved, renamed or re-extracted — the usual cause of a working project
-   suddenly rendering nothing.
-3. Hard-refresh the browser with Ctrl+Shift+R. A normal refresh can keep serving
-   the old module graph.
-4. Check `frontend/.env`. If `VITE_USE_API=true` and no FastAPI server is
-   running on port 8000, the page stalls on the loading screen — set it to
-   `false` for a static demo.
-5. Open DevTools (F12) → Console. The first red line names the file.
-#   s p i c e - j u n c t i o n - r e s t a u r a n t  
- 
+``` bash
+npm run dev -- --force
+```
+
+Hard-refresh the browser:
+
+``` text
+Ctrl + Shift + R
+```
+
+Then open DevTools:
+
+``` text
+F12 → Console
+```
+
+Check the first red error because it normally identifies the failing
+file.
+
+### Backend mode is stuck on loading
+
+If:
+
+``` env
+VITE_USE_API=true
+```
+
+make sure FastAPI is running:
+
+``` bash
+uvicorn main:app --reload --port 8000
+```
+
+Alternatively switch to:
+
+``` env
+VITE_USE_API=false
+```
+
+for the static demo.
+
+------------------------------------------------------------------------
+
+# 🧪 Demo / Architecture Notes
+
+This project intentionally does **not** use a persistent database.
+
+Orders and bookings are stored in an in-memory list and are cleared when
+the backend restarts.
+
+For a production version, the storage layer can be replaced with a real
+database without changing the overall customer-facing flow.
+
+Potential production upgrades include:
+
+-   PostgreSQL
+-   Authentication/admin dashboard
+-   Persistent order history
+-   Payment gateway
+-   Real-time order status
+-   Restaurant admin panel
+-   Image CDN
+-   Analytics
+-   Email/SMS notifications
+
+------------------------------------------------------------------------
+
+# 💼 Client Pitch
+
+The project is structured so restaurant-specific content can be changed
+centrally instead of rewriting the UI.
+
+A client can update:
+
+-   Menu
+-   Prices
+-   Offers
+-   Hours
+-   Address
+-   Delivery information
+-   Reviews
+
+from the content layer.
+
+The current build is therefore suitable as a **restaurant website /
+ordering-system prototype** and can be extended into a production system
+with persistent storage and an admin panel.
+
+------------------------------------------------------------------------
+
+# 📌 Current Status
+
+**Project Type:** Restaurant website + ordering/booking demo\
+**Frontend:** React + Vite\
+**Backend:** FastAPI\
+**Database:** Not connected; in-memory demo storage\
+**Deployment:** Frontend production build supported\
+**Repository:** https://github.com/Anshika113/spice-junction-restaurant
+
+------------------------------------------------------------------------
+
+## 👩‍💻 Author
+
+**Anshika Mishra**
+
+GitHub:\
+https://github.com/Anshika113
+
+------------------------------------------------------------------------
+
+## 📄 License
+
+This project is intended as a demonstration project.
