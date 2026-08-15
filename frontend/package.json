@@ -1,0 +1,25 @@
+{
+  "name": "spice-junction",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "sync": "node scripts/sync-content.mjs",
+    "images": "node scripts/make-placeholders.mjs",
+    "predev": "npm run sync && npm run images",
+    "prebuild": "npm run sync && npm run images",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "jsdom": "^30.0.1",
+    "vite": "^5.4.11"
+  }
+}

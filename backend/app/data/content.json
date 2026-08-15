@@ -1,0 +1,470 @@
+{
+  "info": {
+    "name": "Spice Junction",
+    "tagline": "North Indian, Chinese & Tandoor. Dine in or get it delivered.",
+    "phone": "+91 98765 43210",
+    "phone_dial": "+919876543210",
+    "whatsapp": "919876543210",
+    "address_line1": "Plot 14, Mall Road, Civil Lines",
+    "address_line2": "Kanpur, Uttar Pradesh 208001",
+    "maps_query": "Mall Road Civil Lines Kanpur",
+    "hours": [
+      {
+        "days": "Monday - Thursday",
+        "time": "11:00 am - 11:00 pm"
+      },
+      {
+        "days": "Friday - Sunday",
+        "time": "11:00 am - 12:00 am"
+      }
+    ],
+    "delivery": {
+      "radius_km": 7,
+      "free_above": 499,
+      "fee": 39,
+      "avg_minutes": 34,
+      "areas": [
+        "Civil Lines",
+        "Swaroop Nagar",
+        "Arya Nagar",
+        "Tilak Nagar",
+        "Kakadeo",
+        "Govind Nagar",
+        "Kalyanpur"
+      ]
+    },
+    "upi": "spicejunction@okhdfcbank",
+    "aggregators": [
+      {
+        "label": "Swiggy",
+        "url": "https://www.swiggy.com"
+      },
+      {
+        "label": "Zomato",
+        "url": "https://www.zomato.com"
+      }
+    ],
+    "seats": 120,
+    "since": 2009
+  },
+  "offers": [
+    {
+      "id": "lunch-thali",
+      "name": "Lunch Thali",
+      "window": "Mon-Sat, 12:00 - 3:30 pm",
+      "price": 229,
+      "was": 320,
+      "line": "4 rotis, dal, sabzi, rice, salad, gulab jamun.",
+      "detail": "Office lunch crowd ka regular. Veg 229, non-veg 289. Bulk orders of 10+ get free delivery inside 7 km.",
+      "tone": "spinach"
+    },
+    {
+      "id": "family-pack",
+      "name": "Family Pack for 4",
+      "window": "Every day, all day",
+      "price": 899,
+      "was": 1240,
+      "line": "2 mains, 1 starter, 8 rotis, 2 rice, 2 desserts.",
+      "detail": "Pick any two mains from the Main Course tab. Most ordered combination on weekends.",
+      "tone": "tomato"
+    },
+    {
+      "id": "weekend-buffet",
+      "name": "Weekend Buffet",
+      "window": "Sat & Sun, 12:00 - 4:00 pm",
+      "price": 449,
+      "was": 599,
+      "line": "32 dishes. Live chaat counter and tandoor.",
+      "detail": "Kids under 8 eat at half price. Buffet seats are held for 15 minutes past your booking time.",
+      "tone": "mustard"
+    }
+  ],
+  "categories": [
+    {
+      "id": "starters",
+      "name": "Starters",
+      "note": "Kitchen fires these first"
+    },
+    {
+      "id": "main",
+      "name": "Main Course",
+      "note": "Gravy, dal, sabzi"
+    },
+    {
+      "id": "chinese",
+      "name": "Chinese",
+      "note": "Indo-Chinese, wok tossed"
+    },
+    {
+      "id": "tandoor",
+      "name": "Tandoor",
+      "note": "Clay oven, charcoal"
+    },
+    {
+      "id": "combos",
+      "name": "Combos",
+      "note": "One box, full meal"
+    },
+    {
+      "id": "desserts",
+      "name": "Desserts",
+      "note": "House made daily"
+    }
+  ],
+  "menu": [
+    {
+      "id": "s1",
+      "cat": "starters",
+      "name": "Paneer Tikka",
+      "veg": true,
+      "jain": true,
+      "spice": 2,
+      "price": 289,
+      "half": 169,
+      "best": true,
+      "desc": "Malai-marinated cubes, charred on skewers, chaat masala on top."
+    },
+    {
+      "id": "s2",
+      "cat": "starters",
+      "name": "Crispy Corn",
+      "veg": true,
+      "jain": true,
+      "spice": 1,
+      "price": 179,
+      "half": null,
+      "best": false,
+      "desc": "Sweet corn tossed with curry leaf, pepper and lime."
+    },
+    {
+      "id": "s3",
+      "cat": "starters",
+      "name": "Chicken 65",
+      "veg": false,
+      "jain": false,
+      "spice": 3,
+      "price": 279,
+      "half": 159,
+      "best": true,
+      "desc": "Boneless, red chilli and yoghurt marinade, fried hard."
+    },
+    {
+      "id": "s4",
+      "cat": "starters",
+      "name": "Hara Bhara Kebab",
+      "veg": true,
+      "jain": false,
+      "spice": 1,
+      "price": 189,
+      "half": null,
+      "best": false,
+      "desc": "Spinach, peas and paneer patties, six to a plate."
+    },
+    {
+      "id": "s5",
+      "cat": "starters",
+      "name": "Masala Papad",
+      "veg": true,
+      "jain": true,
+      "spice": 1,
+      "price": 89,
+      "half": null,
+      "best": false,
+      "desc": "Roasted papad, onion tomato salsa, coriander."
+    },
+    {
+      "id": "m1",
+      "cat": "main",
+      "name": "Paneer Butter Masala",
+      "veg": true,
+      "jain": true,
+      "spice": 1,
+      "price": 329,
+      "half": 199,
+      "best": true,
+      "desc": "Tomato and cashew gravy, finished with white butter."
+    },
+    {
+      "id": "m2",
+      "cat": "main",
+      "name": "Dal Makhani",
+      "veg": true,
+      "jain": true,
+      "spice": 1,
+      "price": 259,
+      "half": 159,
+      "best": true,
+      "desc": "Black urad simmered overnight. Cream stirred in at the pass."
+    },
+    {
+      "id": "m3",
+      "cat": "main",
+      "name": "Butter Chicken",
+      "veg": false,
+      "jain": false,
+      "spice": 2,
+      "price": 389,
+      "half": 229,
+      "best": true,
+      "desc": "Tandoor-cooked thigh pieces in a slow-reduced makhani gravy."
+    },
+    {
+      "id": "m4",
+      "cat": "main",
+      "name": "Kadhai Mushroom",
+      "veg": true,
+      "jain": false,
+      "spice": 2,
+      "price": 289,
+      "half": 179,
+      "best": false,
+      "desc": "Button mushrooms, crushed coriander seed, capsicum."
+    },
+    {
+      "id": "m5",
+      "cat": "main",
+      "name": "Mutton Rogan Josh",
+      "veg": false,
+      "jain": false,
+      "spice": 3,
+      "price": 449,
+      "half": null,
+      "best": false,
+      "desc": "Bone-in mutton, Kashmiri chilli, cooked two and a half hours."
+    },
+    {
+      "id": "m6",
+      "cat": "main",
+      "name": "Jeera Rice",
+      "veg": true,
+      "jain": true,
+      "spice": 0,
+      "price": 149,
+      "half": null,
+      "best": false,
+      "desc": "Long grain basmati, cumin tempered in ghee."
+    },
+    {
+      "id": "c1",
+      "cat": "chinese",
+      "name": "Veg Hakka Noodles",
+      "veg": true,
+      "jain": false,
+      "spice": 1,
+      "price": 199,
+      "half": 129,
+      "best": false,
+      "desc": "Wok tossed with julienned cabbage, carrot and spring onion."
+    },
+    {
+      "id": "c2",
+      "cat": "chinese",
+      "name": "Chilli Paneer Dry",
+      "veg": true,
+      "jain": false,
+      "spice": 3,
+      "price": 259,
+      "half": 159,
+      "best": true,
+      "desc": "Sticky soy-chilli glaze, capsicum, plenty of green chilli."
+    },
+    {
+      "id": "c3",
+      "cat": "chinese",
+      "name": "Chicken Manchurian",
+      "veg": false,
+      "jain": false,
+      "spice": 2,
+      "price": 289,
+      "half": 179,
+      "best": false,
+      "desc": "Fried chicken balls in a garlic and ginger gravy."
+    },
+    {
+      "id": "c4",
+      "cat": "chinese",
+      "name": "Veg Fried Rice",
+      "veg": true,
+      "jain": false,
+      "spice": 1,
+      "price": 189,
+      "half": 119,
+      "best": false,
+      "desc": "High-flame rice with beans, carrot and dark soy."
+    },
+    {
+      "id": "c5",
+      "cat": "chinese",
+      "name": "Sweet Corn Soup",
+      "veg": true,
+      "jain": true,
+      "spice": 0,
+      "price": 129,
+      "half": null,
+      "best": false,
+      "desc": "Thick, clear, white pepper forward. Served with fried noodles."
+    },
+    {
+      "id": "t1",
+      "cat": "tandoor",
+      "name": "Tandoori Chicken (Half)",
+      "veg": false,
+      "jain": false,
+      "spice": 2,
+      "price": 329,
+      "half": null,
+      "best": true,
+      "desc": "Overnight yoghurt marinade, charcoal tandoor, lemon and onion."
+    },
+    {
+      "id": "t2",
+      "cat": "tandoor",
+      "name": "Seekh Kebab",
+      "veg": false,
+      "jain": false,
+      "spice": 2,
+      "price": 299,
+      "half": 179,
+      "best": false,
+      "desc": "Minced mutton on skewers, mint chutney on the side."
+    },
+    {
+      "id": "t3",
+      "cat": "tandoor",
+      "name": "Butter Naan",
+      "veg": true,
+      "jain": false,
+      "spice": 0,
+      "price": 59,
+      "half": null,
+      "best": false,
+      "desc": "Slapped on the tandoor wall, brushed with butter."
+    },
+    {
+      "id": "t4",
+      "cat": "tandoor",
+      "name": "Tandoori Aloo",
+      "veg": true,
+      "jain": false,
+      "spice": 1,
+      "price": 229,
+      "half": null,
+      "best": false,
+      "desc": "Baby potatoes stuffed with dry fruit and khoya."
+    },
+    {
+      "id": "b1",
+      "cat": "combos",
+      "name": "Veg Thali",
+      "veg": true,
+      "jain": true,
+      "spice": 1,
+      "price": 229,
+      "half": null,
+      "best": true,
+      "desc": "Dal, sabzi, rice, 4 rotis, salad, papad, gulab jamun."
+    },
+    {
+      "id": "b2",
+      "cat": "combos",
+      "name": "Non-Veg Thali",
+      "veg": false,
+      "jain": false,
+      "spice": 2,
+      "price": 289,
+      "half": null,
+      "best": true,
+      "desc": "Butter chicken, dal, rice, 4 rotis, salad, dessert."
+    },
+    {
+      "id": "b3",
+      "cat": "combos",
+      "name": "Office Lunch Box",
+      "veg": true,
+      "jain": true,
+      "spice": 1,
+      "price": 179,
+      "half": null,
+      "best": false,
+      "desc": "One sabzi, dal, rice, 3 rotis. Delivered by 1:00 pm if ordered by noon."
+    },
+    {
+      "id": "b4",
+      "cat": "combos",
+      "name": "Family Pack for 4",
+      "veg": false,
+      "jain": false,
+      "spice": 2,
+      "price": 899,
+      "half": null,
+      "best": true,
+      "desc": "2 mains, 1 starter, 8 rotis, 2 rice, 2 desserts."
+    },
+    {
+      "id": "d1",
+      "cat": "desserts",
+      "name": "Gulab Jamun (2 pc)",
+      "veg": true,
+      "jain": true,
+      "spice": 0,
+      "price": 89,
+      "half": null,
+      "best": false,
+      "desc": "Fried fresh through the evening, served warm."
+    },
+    {
+      "id": "d2",
+      "cat": "desserts",
+      "name": "Rasmalai (2 pc)",
+      "veg": true,
+      "jain": true,
+      "spice": 0,
+      "price": 129,
+      "half": null,
+      "best": true,
+      "desc": "Saffron milk, pistachio, chilled four hours."
+    },
+    {
+      "id": "d3",
+      "cat": "desserts",
+      "name": "Brownie with Ice Cream",
+      "veg": true,
+      "jain": false,
+      "spice": 0,
+      "price": 159,
+      "half": null,
+      "best": false,
+      "desc": "Warm walnut brownie, vanilla scoop, chocolate sauce."
+    }
+  ],
+  "reviews": [
+    {
+      "id": "r1",
+      "author": "Ritika Sahu",
+      "rating": 5,
+      "when": "2 weeks ago",
+      "text": "Ordered the family pack for a Sunday lunch. Reached hot, packing was solid, and the butter chicken was as good as it is in the restaurant."
+    },
+    {
+      "id": "r2",
+      "author": "Amit Trivedi",
+      "rating": 5,
+      "when": "1 month ago",
+      "text": "We do our office lunch order here almost daily. They actually deliver by 1 pm like they say, which no one else manages."
+    },
+    {
+      "id": "r3",
+      "author": "Neha Bansal",
+      "rating": 4,
+      "when": "1 month ago",
+      "text": "Weekend buffet is good value for 449. Chaat counter had a queue but the staff kept the tandoor plates coming to the table."
+    },
+    {
+      "id": "r4",
+      "author": "Faizan Khan",
+      "rating": 5,
+      "when": "2 months ago",
+      "text": "Booked a table for 12 for my father's birthday. They set it up in the corner section and handled the cake without being asked twice."
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#191512" />
+    <meta property="og:image" content="/img/og.svg" />
+    <meta property="og:image:alt" content="Spice Junction, Civil Lines Kanpur" />
+    <title>Spice Junction — North Indian, Chinese & Tandoor in Kanpur</title>
+    <meta name="description" content="Order online or book a table at Spice Junction, Civil Lines Kanpur. Full menu with prices, lunch thali at Rs 229, delivery within 7 km." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Spice Junction",
+      "servesCuisine": ["North Indian", "Chinese", "Tandoor"],
+      "priceRange": "₹₹",
+      "telephone": "+91 98765 43210",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Plot 14, Mall Road, Civil Lines",
+        "addressLocality": "Kanpur",
+        "addressRegion": "Uttar Pradesh",
+        "postalCode": "208001",
+        "addressCountry": "IN"
+      },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"],
+          "opens": "11:00", "closes": "23:00" },
+        { "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Friday","Saturday","Sunday"],
+          "opens": "11:00", "closes": "00:00" }
+      ],
+      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "4" },
+      "hasMenu": { "@type": "Menu", "url": "/menu" },
+      "acceptsReservations": "True"
+    }
+    </script>
+  </head>
+  <body>
+    <div id="root">
+      <!-- Replaced by React on mount. If this is still on screen, the app never
+           started — the script below turns that into a readable message
+           instead of a blank page. -->
+      <div id="boot" style="font:500 15px/1.5 Inter,system-ui,sans-serif;color:#191512;padding:2rem;max-width:44rem">
+        <p style="font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:.75rem;color:#E23A2E;margin:0 0 .5rem">Spice Junction</p>
+        <p style="margin:0">Starting the app…</p>
+      </div>
+    </div>
+
+    <script>
+      /* Blank-screen insurance. Any script error before or during React's first
+         render lands here and gets printed on the page, so a demo machine never
+         shows an empty window with the answer hidden in the console. */
+      (function () {
+        function paint(title, detail) {
+          var boot = document.getElementById('boot');
+          if (!boot) return;
+          boot.innerHTML =
+            '<p style="font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:.75rem;color:#E23A2E;margin:0 0 .5rem">' + title + '</p>' +
+            '<pre style="white-space:pre-wrap;word-break:break-word;background:#FFF7F0;border:2px solid #191512;border-radius:12px;padding:1rem;margin:0 0 1rem;font:13px/1.5 ui-monospace,Consolas,monospace">' + detail + '</pre>' +
+            '<p style="margin:0;color:#5c554e">Try: stop the server, then <code>npm run dev -- --force</code>, and hard-refresh with Ctrl+Shift+R.</p>';
+        }
+        window.addEventListener('error', function (e) {
+          paint('The app did not start', (e.message || 'Script error') + (e.filename ? '\n' + e.filename + ':' + e.lineno : ''));
+        }, true);
+        window.addEventListener('unhandledrejection', function (e) {
+          paint('The app did not start', String((e.reason && e.reason.stack) || e.reason));
+        });
+        setTimeout(function () {
+          if (document.getElementById('boot')) {
+            paint('The app did not start', 'No JavaScript ran within 8 seconds.\n\nUsually this means node_modules is missing or the dev server is serving a stale cache.');
+          }
+        }, 8000);
+      })();
+    </script>
+
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

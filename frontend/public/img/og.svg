@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img"><defs>
+    <linearGradient id="bg-2102" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F5A623" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#1F6B4A" stop-opacity="0.5"/>
+    </linearGradient>
+    <radialGradient id="gl-2102" cx="0.34" cy="0.28" r="0.75">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#FFF7F0"/>
+  <rect width="1200" height="630" fill="url(#bg-2102)"/>
+  <rect width="1200" height="630" fill="url(#gl-2102)"/>
+  <circle cx="600" cy="315" r="282.744" fill="#FFF7F0" stroke="#191512" stroke-width="9.639000000000001"/>
+  <circle cx="600" cy="315" r="235.62000000000003" fill="none" stroke="#191512" stroke-width="4.284000000000001" opacity="0.35"/>
+  <circle cx="600" cy="315" r="214.20000000000002" fill="#1F6B4A"/>
+  <circle cx="600" cy="315" r="141.372" fill="#F5A623" opacity="0.9"/>
+  <circle cx="645.4" cy="242.3" r="10.7" fill="#7A2B18" opacity="0.72"/><circle cx="720.6" cy="334.1" r="15.4" fill="#7A2B18" opacity="0.72"/><circle cx="617.6" cy="385.7" r="20.1" fill="#7A2B18" opacity="0.72"/><circle cx="512.8" cy="380.7" r="10.7" fill="#7A2B18" opacity="0.72"/><circle cx="548.1" cy="285.0" r="15.4" fill="#7A2B18" opacity="0.72"/><circle cx="611.7" cy="219.3" r="20.1" fill="#7A2B18" opacity="0.72"/><circle cx="645.3" cy="302.0" r="10.7" fill="#7A2B18" opacity="0.72"/><circle cx="652.6" cy="379.9" r="15.4" fill="#7A2B18" opacity="0.72"/><circle cx="543.7" cy="420.9" r="20.1" fill="#7A2B18" opacity="0.72"/>
+  <path d="M467.196 417.81600000000003q132.804 72.82800000000002 265.608 0"
+        fill="none" stroke="#191512" stroke-width="7.497000000000002" opacity="0.28"/><text x="60" y="88" fill="#191512"
+      font-family="Inter, system-ui, sans-serif" font-weight="700" font-size="39"
+      letter-spacing="-0.4">Spice Junction · Civil Lines, Kanpur</text><g>
+    <rect x="34" y="549" width="432" height="47" rx="13.160000000000002"
+          fill="#191512" opacity="0.86"/>
+    <text x="52.8" y="581.9" fill="#FFF7F0"
+          font-family="Inter, system-ui, sans-serif" font-size="20"
+          letter-spacing="1.4">DEMO IMAGE — REPLACE</text>
+  </g></svg>
