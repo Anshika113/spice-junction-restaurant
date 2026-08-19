@@ -12,6 +12,7 @@ which is intentional for a client-pitch/demo build.
 ## 🔗 Project
 
 -   **GitHub:** https://github.com/Anshika113/spice-junction-restaurant
+-   **Live Demo:** https://spice-junction-restaurant.pages.dev
 
 ------------------------------------------------------------------------
 
